@@ -17,14 +17,16 @@ services:
     name: clinical-ai-frontend
     runtime: node
     plan: free
+    rootDir: clinic_app
     buildCommand: |
-      cd clinic_app
       npm install
       npm run build
-    startCommand: cd clinic_app && npm run start
+    startCommand: npm run start
     envVars:
       - key: NEXT_PUBLIC_API_URL
         value: https://clinical-ai-backend.onrender.com
+      - key: NODE_VERSION
+        value: 18
     healthCheckPath: /
 
 databases:

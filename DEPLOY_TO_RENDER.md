@@ -104,7 +104,7 @@ Currently using mock data in `clinical_tools.py`. To use PostgreSQL:
 3. No trailing slash in URL
 
 ### Build fails
-1. Ensure `requirements.txt` and `package.json` are in root and `clinic_app/` respectively
+1. Ensure Render points to `clinic_app` as the Root Directory (or use the blueprint in render.yaml)
 2. Check Python and Node versions match configuration
 3. Review build logs for specific errors
 
